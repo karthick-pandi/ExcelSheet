@@ -1,17 +1,17 @@
 const mongoose = require("mongoose");
 
 const bikeSchema = new mongoose.Schema({
-    brand: {
+    name: {
         type: String,
         required: true
     },
-    model: {
+    vehicle: {
         type: String,
         required: true
     },
-    year: {
-        type: Number,
-        required: true
+    createdAt: {
+        type: Date, 
+        default: Date.now 
     }
 });
 
