@@ -30,13 +30,13 @@ router.get("/bikes",async (req,res)=>{
 })
 
 router.post("/add-bikes", async (req, res) => {
-    const { brand, model, year } = req.body;
-    colsole.log("****brand, model, year *",brand, model, year )
+    const { loginEmployee, selectedBike, currentDateTime } = req.body;
+    console.log("****brand, model, year *",loginEmployee, selectedBike, currentDateTime )
 
     const newBike = new BikeDetails({
-        brand,
-        model,
-        year
+        loginEmployee,
+        selectedBike,
+        currentDateTime
     });
 
     try {
