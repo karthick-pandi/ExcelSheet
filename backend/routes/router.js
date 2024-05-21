@@ -40,7 +40,7 @@ router.post("/add-bikes", async (req, res) => {
     });
 
     try {
-        const savedBike = await newBike.save();
+        const savedBike = await newBike.insertOne();
         res.json(savedBike);
     } catch (err) {
         res.status(500).json({ message: err.message });
